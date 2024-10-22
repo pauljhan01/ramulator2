@@ -116,8 +116,8 @@ env.Append(
   ramulator2_path+'/ext/yaml-cpp/include'
 ])
 ```
-4. Put the Ramulator2 wrapper code to `gem5/src/mem/`
-5. Add the code to `gem5/src/mem/SConscript` to register the Ramulator2 SimObjects to gem5 
+4. Copy the files located in `ramulator2/resources/gem5_wrappers` to `gem5/src/mem/`
+5. Add the code below to `gem5/src/mem/SConscript` to register the Ramulator2 SimObjects to gem5 
 ```python
 if env['HAVE_RAMULATOR2']:
   SimObject('Ramulator2.py', sim_objects=['Ramulator2'])
